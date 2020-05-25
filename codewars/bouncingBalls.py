@@ -46,6 +46,7 @@ class BouncingBall():
 ###################
 # Other Solutions #
 ###################
+
 def bouncingBall(h, bounce, window):
     if not 0 < bounce < 1: 
         return -1
