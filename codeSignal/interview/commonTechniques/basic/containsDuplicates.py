@@ -3,8 +3,5 @@ Given an array of integers, write a function that determines whether the array c
 """
 
 def contains_duplicates(a):
-	a_set = {n for n in a}
-	if len(a_set) != len(a):
-		return True
-	else:
-		return False
+	a_set = set(a)
+	return len(a_set) != len(a)

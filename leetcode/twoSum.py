@@ -5,16 +5,31 @@ You may assume that each input would have exactly one solution, and you may not 
 """
 
 def two_sum(nums, target):
-	nums_list = [n for n in nums if n <= target]
-	nums_sums = [[num1, num2] for num1 in num_list for num2 in num_list if num_list.index(num2) != num_list.index(num1)]
-	valid_sums = []
-	for possible_sum in nums_sums:
-		if (sum(possible_sum) == target):
-			num1_index = nums.index(possible_sum[0])
-			num2_index = nums.index(possible_sum[-1])
-			valid_sums.append([num1_index, num2_index])
-			break
-		else:
-			pass
+    # a = [[n, k] for n in nums for k in nums if k is not n]
+    # for item in a:
+    # 	if sum(item) == target:
+    # 		first, second = nums.index(item[0]), nums.index(item[-1])
+    # 		print(first, second)
+    # 		break
+    b = {n: nums[n] for n in range(0, len(nums))}
+    print(b)
+    complements = {n: target - nums[n] for n in range(0, len(nums))}
+    print(complements)
+    for item in b.items():
+    	print(item)
 
-	return valid_sums
+
+
+n = [2, 6, 7, 9, 10]
+t = 9
+
+def two_sum_two(nums, target):
+	complements = [target - n for n in nums]
+	print(complements)
+	for n in nums:
+		if n in complements:
+			return nums.index(n)
+		else:
+			return False
+
+a = two_sum(n, t)
