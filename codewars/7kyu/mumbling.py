@@ -6,11 +6,11 @@ accum("abcd") -> "A-Bb-Ccc-Dddd"
 accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 accum("cwAt") -> "C-Ww-Aaa-Tttt"
 """
-
+    
 def accum(mumble):
-	mumbles = []
-	for letter in list(mumble):
-		mumbly = letter * (list(mumble).index(letter) + 1)
-		mumbles.append(mumbly.title())
+    mumbles = []
+    for index, letter in enumerate(list(mumble)):
+        mumbly = letter * (index + 1)
+	mumbles.append(mumbly.title())
 
-	return "-".join(mumbles)
+    return "-".join(mumbles)
