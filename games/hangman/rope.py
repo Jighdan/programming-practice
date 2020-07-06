@@ -3,7 +3,6 @@ from string import ascii_lowercase
 from random import choice
 import requests
 
-
 def fetch_word():
     url = "https://raw.githubusercontent.com/Xethron/Hangman/master/words.txt"
     word_text = requests.get(url).text
