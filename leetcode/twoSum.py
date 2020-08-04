@@ -26,10 +26,8 @@ t = 9
 def two_sum_two(nums, target):
 	complements = [target - n for n in nums]
 	print(complements)
-	for n in nums:
-		if n in complements:
-			return nums.index(n)
-		else:
-			return False
+	for index, n in enumerate(nums):
+		return nums[index] if n in complements else False
 
-a = two_sum(n, t)
+a = two_sum_two(n, t)
+print(a)
