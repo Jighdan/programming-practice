@@ -8,4 +8,4 @@ const shortestWord = (stringOfWords) => {
 	const words = stringOfWords.split(" ");
 	const wordsLengths = words.map(word => word.length);
 	return Math.min(...wordsLengths);
-}
+};

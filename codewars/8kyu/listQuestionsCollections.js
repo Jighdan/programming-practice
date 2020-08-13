@@ -12,9 +12,9 @@ const countSheep = sheeps => {
 	let count = 0;
 	for (let item = 0; item < sheeps; item++) {
 		if ( sheeps[item] == true ) {
-			count++
+			count++;
 		}
-	};
+	}
 	return count;
 };
 
