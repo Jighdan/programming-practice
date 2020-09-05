@@ -10,4 +10,3 @@ def first_not_repeating_character(s):
 		if i[1] == 1:
 			return i[0]
 	return "_"
-
