@@ -5,13 +5,11 @@ Put a single space between the words.
 Convert the uppercase letters to lowercase.
 """
 
-import re
-
-def amend_the_sentence(s):
-	pass
-
-string = "HelloWorldOH"
-a = re.findall("[A-Z]", string)
-b = [string.index(i) for i in a]
-
-d = list(string)
+def amendTheSentence(string):
+    a = {index: string[index] for index in range(0, len(string))}
+    for index in a.keys():
+	    if a[index].isupper():
+		    requires_space = " " if index != 0 else ""
+		    a[index] = f"{requires_space}{a[index].lower()}"
+            
+    return "".join(a.values())
